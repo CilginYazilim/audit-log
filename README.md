@@ -14,9 +14,9 @@
 [![DataTables](https://img.shields.io/badge/DataTables-1.13-0f5499?style=flat-square)](https://datatables.net)
 [![License](https://img.shields.io/badge/Lisans-MIT-16a34a?style=flat-square)](LICENSE)
 
-**🇹🇷 Türkçe** &nbsp;·&nbsp; [🇬🇧 English](README.en.md)
+**🇹🇷 Türkçe** · [🇬🇧 English](README.en.md)
 
-[**▶ Canlı Demo**](https://cilginyazilim.com/kutuphane/uygulama/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables-main/) &nbsp;·&nbsp; [Kaynak Kütüphanesi](https://cilginyazilim.com/kutuphane/php-audit-log) &nbsp;·&nbsp; [cilginyazilim.com](https://cilginyazilim.com)
+[**▶ Canlı Demo**](https://cilginyazilim.com/kutuphane/uygulama/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables-main/) · [Kaynak Kütüphanesi](https://cilginyazilim.com/kutuphane/php-audit-log) · [cilginyazilim.com](https://cilginyazilim.com)
 
 </div>
 
@@ -29,9 +29,7 @@
 **Kurulum yok, kayıt yok, indirme yok — tarayıcınızdan 3 saniyede deneyin.**
 
 <a href="https://cilginyazilim.com/kutuphane/uygulama/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables-main/"><img src="https://img.shields.io/badge/CANLI_DEMOYU_A%C3%87-0b5cb5?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=061321" alt="Canlı Demoyu Aç" height="42"></a>
-&nbsp;
 <a href="https://cilginyazilim.com/kutuphane/php-audit-log"><img src="https://img.shields.io/badge/KAYNAK_KODU_%C4%B0NCELE-0ea5e9?style=for-the-badge&logo=readthedocs&logoColor=white&labelColor=061321" alt="Kaynak Kodu İncele" height="42"></a>
-&nbsp;
 <a href="https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/ZIP_%C4%B0ND%C4%B0R-16a34a?style=for-the-badge&logo=github&logoColor=white&labelColor=061321" alt="ZIP İndir" height="42"></a>
 
 <br><br>
@@ -802,7 +800,6 @@ Yazabilirsiniz ama **transaction garantisini kaybedersiniz** — bu projedeki en
 ### Önce bir deneyin
 
 <a href="https://cilginyazilim.com/kutuphane/uygulama/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables-main/"><img src="https://img.shields.io/badge/CANLI_DEMOYU_A%C3%87-0b5cb5?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=061321" alt="Canlı Demoyu Aç" height="42"></a>
-&nbsp;
 <a href="https://cilginyazilim.com/kutuphane"><img src="https://img.shields.io/badge/D%C4%B0%C4%9EER_%C3%96RNEKLER-061321?style=for-the-badge&logo=bookstack&logoColor=white&labelColor=061321" alt="Diğer Örnekler" height="42"></a>
 
 **[cilginyazilim.com](https://cilginyazilim.com)** tarafından ❤ ile geliştirildi

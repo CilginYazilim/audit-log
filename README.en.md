@@ -14,9 +14,9 @@
 [![DataTables](https://img.shields.io/badge/DataTables-1.13-0f5499?style=flat-square)](https://datatables.net)
 [![License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)](LICENSE)
 
-[🇹🇷 Türkçe](README.md) &nbsp;·&nbsp; **🇬🇧 English**
+[🇹🇷 Türkçe](README.md) · **🇬🇧 English**
 
-[**▶ Live Demo**](https://cilginyazilim.com/kutuphane/uygulama/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables-main/) &nbsp;·&nbsp; [Source Library](https://cilginyazilim.com/kutuphane/php-audit-log) &nbsp;·&nbsp; [cilginyazilim.com](https://cilginyazilim.com)
+[**▶ Live Demo**](https://cilginyazilim.com/kutuphane/uygulama/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables-main/) · [Source Library](https://cilginyazilim.com/kutuphane/php-audit-log) · [cilginyazilim.com](https://cilginyazilim.com)
 
 </div>
 
@@ -29,7 +29,6 @@
 **No setup, no signup, no download — try it in your browser in 3 seconds.**
 
 <a href="https://cilginyazilim.com/kutuphane/uygulama/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables-main/"><img src="https://img.shields.io/badge/OPEN_LIVE_DEMO-0b5cb5?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=061321" alt="Open Live Demo" height="42"></a>
-&nbsp;
 <a href="https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/DOWNLOAD_ZIP-16a34a?style=for-the-badge&logo=github&logoColor=white&labelColor=061321" alt="Download ZIP" height="42"></a>
 
 <br><br>
