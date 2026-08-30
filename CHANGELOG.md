@@ -5,6 +5,17 @@ sürüm numaralandırması [Semantic Versioning](https://semver.org/lang/tr/) ku
 
 ---
 
+## [1.0.1] — 2026-08-30
+
+### Eklendi
+
+- `system/config.local.php` desteği: canlı veritabanı künyesi artık `config.php`'ye değil, `.gitignore`'daki ayrı bir dosyaya yazılır. İki sebeple: parola depoya girmez ve `config.php` her dağıtımda depodaki sürümle değiştirildiği için elle yapılan düzenleme kaybolmaz.
+- `system/config.local.php.example` — doldurulacak şablon.
+
+`DB_*` sabitleri artık `if (! defined(...))` ile korunuyor: öncelik sırası **config.local.php → ortam değişkeni → yerel varsayılan**.
+
+---
+
 ## [1.0.0] — 2026-08-30
 
 İlk genel sürüm. Denetim katmanı, arayüz ve belgelendirme üretime hazır durumda.
@@ -68,4 +79,5 @@ sürüm numaralandırması [Semantic Versioning](https://semver.org/lang/tr/) ku
 - `.htaccess`: `README*.md` dosyaları bilinçli istisna olarak açıldı (kütüphane sayfası içerik olarak okuyor); diğer `.md`, `.sql`, `.json`, `.log`, `.ini`, `.bak` dosyaları kapalı.
 - `DirectoryIndex index.php` eklendi — demo alt klasörden servis edilirken klasör adresi doğrudan uygulamayı açar.
 
+[1.0.1]: https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables/releases/tag/v1.0.1
 [1.0.0]: https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables/releases/tag/v1.0.0

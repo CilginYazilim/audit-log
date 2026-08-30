@@ -22,10 +22,41 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-define('DB_HOST', getenv('DB_HOST') ?: '127.0.0.1');
-define('DB_NAME', getenv('DB_NAME') ?: 'cy_audit');
-define('DB_USER', getenv('DB_USER') ?: 'root');
-define('DB_PASS', getenv('DB_PASS') !== false ? (string) getenv('DB_PASS') : '');
+/* ---------------------------------------------------------------------
+ *  SUNUCUYA ÖZEL AYARLAR — system/config.local.php
+ * ---------------------------------------------------------------------
+ *  Canlı veritabanı adı/kullanıcı/parola BU DOSYAYA DEĞİL, yanındaki
+ *  config.local.php dosyasına yazılır. Nedeni iki katmanlı:
+ *
+ *    1) config.php depoda durur; parolayı buraya yazmak onu GitHub'a taşır.
+ *    2) config.php her dağıtımda depodaki sürümle DEĞİŞTİRİLİR — elle
+ *       yapılan düzenleme bir sonraki deploy'da silinir.
+ *
+ *  config.local.php ise .gitignore içindedir: depoya girmez, deploy ona
+ *  dokunmaz. Örnek içerik için: config.local.php.example
+ * ------------------------------------------------------------------ */
+$yerelAyar = __DIR__ . '/config.local.php';
+
+if (is_file($yerelAyar)) {
+    require_once $yerelAyar;
+}
+
+/* Aşağıdakiler yalnızca config.local.php (ya da ortam değişkeni) değer
+ * VERMEDİYSE devreye girer; yerel XAMPP kurulumuna göre varsayılanlardır. */
+if (! defined('DB_HOST')) {
+    define('DB_HOST', getenv('DB_HOST') ?: '127.0.0.1');
+}
+if (! defined('DB_NAME')) {
+    define('DB_NAME', getenv('DB_NAME') ?: 'cy_audit');
+}
+if (! defined('DB_USER')) {
+    define('DB_USER', getenv('DB_USER') ?: 'root');
+}
+if (! defined('DB_PASS')) {
+    define('DB_PASS', getenv('DB_PASS') !== false ? (string) getenv('DB_PASS') : '');
+}
+
+// utf8mb4: Türkçe karakterler ve emoji dahil tüm Unicode'u destekler.
 define('DB_CHARSET', 'utf8mb4');
 
 /* ---------------------------------------------------------------------
