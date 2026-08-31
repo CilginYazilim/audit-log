@@ -47,7 +47,7 @@
 ### Demoda 60 saniyede neleri deneyebilirsiniz?
 
 | # | Şunu deneyin | Perde arkasında ne oluyor? |
-|:-:|--------------|----------------------------|
+|---|--------------|----------------------------|
 | **1** | Bir ürünün **fiyatını** değiştirip kaydedin | Alttaki geçmişe anında `Güncellendi` satırı düşer; toast **"1 alan"** der — bu sayı tahmin değil, sunucudaki `diff_values()` çıktısıdır |
 | **2** | Aynı ürünü **hiçbir şey değiştirmeden** tekrar kaydedin | Geçmişe **satır eklenmez**. "Kaydet'e bastım" bir olay değildir; denetim kaydı yalnızca gerçek değişikliği tutar |
 | **3** | 👁 **Göz** butonuna basın | Alan bazlı diff açılır: eski değer üstü çizili kırmızı, yeni değer yeşil. Değişmeyen alanlar listede **hiç yoktur** |

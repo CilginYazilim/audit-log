@@ -46,7 +46,7 @@
 ### What can you try in 60 seconds?
 
 | # | Try this | What happens behind the scenes |
-|:-:|----------|--------------------------------|
+|---|----------|--------------------------------|
 | **1** | Change a product's **price** and save | An `Updated` row appears in the history instantly; the toast says **"1 field"** — that number comes from the server's `diff_values()`, it is not a guess |
 | **2** | Save the same product again **without changing anything** | **No row is written.** "I pressed save" is not an event; an audit log records real changes only |
 | **3** | Press the 👁 **eye** button | Field-level diff opens: old value struck through in red, new value in green. Unchanged fields are **not listed at all** |
