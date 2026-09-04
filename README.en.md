@@ -273,6 +273,12 @@ cd audit-log
 mysql -u root -p < cy_audit.sql
 ```
 
+> **Optional — your own database credentials:** run
+> `cp .env.example .env` (Windows: `copy .env.example .env`) and fill in the
+> `DB_*` lines. It runs without the file too; the defaults match a local XAMPP
+> install (`root`, empty password). `.env` is in `.gitignore`, so your password
+> never reaches the repository.
+
 With phpMyAdmin: **Import → Choose file → `cy_audit.sql` → Go**
 
 **3 — Run it**
@@ -415,6 +421,7 @@ define('AUDIT_ENTITIES', ['product' => 'Product', 'order' => 'Order']);
 ```
 .
 ├── index.php                      # Presentation layer — never touches the database
+├── .env.example                   # Database credentials (optional) — in .gitignore
 ├── cy_audit.sql                   # Schema + 12 products + 8 sample audit records
 ├── README.md / README.en.md       # Documentation
 ├── CHANGELOG.md                   # Release notes

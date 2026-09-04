@@ -279,6 +279,12 @@ cd audit-log
 mysql -u root -p < cy_audit.sql
 ```
 
+> **İsteğe bağlı — kendi veritabanı bilgileriniz:**
+> `cp .env.example .env` (Windows: `copy .env.example .env`) deyip `DB_*`
+> satırlarını doldurun. Bu dosya olmadan da çalışır; varsayılanlar yerel bir
+> XAMPP kurulumuna (`root`, boş parola) göredir. `.env` `.gitignore`
+> içindedir — parolanız depoya gitmez.
+
 phpMyAdmin ile: **İçe Aktar → Dosya seç → `cy_audit.sql` → Başlat**
 
 **3 — Çalıştırın**
@@ -469,6 +475,7 @@ Kullanıcının işletim sistemi koyu temadaysa **otomatik** devreye girer. Zorl
 ```
 .
 ├── index.php                      # Arayüz (sunum katmanı) — veritabanına dokunmaz
+├── .env.example                   # Veritabanı bilgileri (isteğe bağlı) — .gitignore içinde
 ├── cy_audit.sql                   # Şema + 12 ürün + 8 örnek denetim kaydı
 ├── README.md / README.en.md       # Belgelendirme
 ├── CHANGELOG.md                   # Sürüm notları
