@@ -16,7 +16,7 @@
 
 [🇹🇷 Türkçe](README.md) · **🇬🇧 English**
 
-[**▶ Live Demo**](https://cilginyazilim.com/kutuphane/uygulama/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables-main/) · [Source Library](https://cilginyazilim.com/kutuphane/php-audit-log) · [cilginyazilim.com](https://cilginyazilim.com)
+[**▶ Live Demo**](https://cilginyazilim.com/kutuphane/uygulama/audit-log/) · [Source Library](https://cilginyazilim.com/kutuphane/php-audit-log) · [cilginyazilim.com](https://cilginyazilim.com)
 
 </div>
 
@@ -28,12 +28,12 @@
 
 **No setup, no signup, no download — try it in your browser in 3 seconds.**
 
-<a href="https://cilginyazilim.com/kutuphane/uygulama/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables-main/"><img src="https://img.shields.io/badge/OPEN_LIVE_DEMO-0b5cb5?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=061321" alt="Open Live Demo" height="42"></a>
-<a href="https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/DOWNLOAD_ZIP-16a34a?style=for-the-badge&logo=github&logoColor=white&labelColor=061321" alt="Download ZIP" height="42"></a>
+<a href="https://cilginyazilim.com/kutuphane/uygulama/audit-log/"><img src="https://img.shields.io/badge/OPEN_LIVE_DEMO-0b5cb5?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=061321" alt="Open Live Demo" height="42"></a>
+<a href="https://github.com/CilginYazilim/audit-log/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/DOWNLOAD_ZIP-16a34a?style=for-the-badge&logo=github&logoColor=white&labelColor=061321" alt="Download ZIP" height="42"></a>
 
 <br><br>
 
-<a href="https://cilginyazilim.com/kutuphane/uygulama/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables-main/" title="Click to open the live demo">
+<a href="https://cilginyazilim.com/kutuphane/uygulama/audit-log/" title="Click to open the live demo">
   <img src="docs/screenshots/01-genel-gorunum.png" alt="Audit log live demo preview" width="860">
 </a>
 
@@ -261,8 +261,8 @@ There is **no endpoint** in `system/ajax.php` that does anything but `INSERT` on
 **1 — Download the project**
 
 ```bash
-git clone https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables.git
-cd PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables
+git clone https://github.com/CilginYazilim/audit-log.git
+cd audit-log
 ```
 
 **2 — Create the database**
@@ -284,6 +284,45 @@ php -S 127.0.0.1:8000
 **4 — Open** → `http://127.0.0.1:8000/`
 
 You'll see a working screen with **12 products** and **8 sample audit records**.
+
+### Environment variables
+
+Put them in a **`.env`** file at the repository root and never touch
+`system/config.php`:
+
+```bash
+cp .env.example .env        # Windows: copy .env.example .env
+```
+
+`.env` is in `.gitignore`: it never reaches the repository and a deploy
+does **not** delete it. `system/config.php`, by contrast, lives in the
+repository and is replaced by the repository's copy on every deploy — a
+password written there both ships to GitHub and disappears on the first
+deploy.
+
+The app runs without the file too; the defaults below match a local XAMPP
+install.
+
+**Lookup order:** `.env` → the real environment variable (Apache `SetEnv`,
+systemd…) → the default shown here.
+
+| Variable | Default | What it does |
+|---|---|---|
+| `DB_HOST` | `127.0.0.1` | Database server |
+| `DB_NAME` | `cy_audit` | Database name |
+| `DB_USER` | `root` | User |
+| `DB_PASS` | *(empty)* | Password — **never hard-code it** |
+| `APP_TIMEZONE` | `Europe/Istanbul` | PHP timezone |
+| `APP_DEBUG` | *from environment* | Whether errors are printed to the page |
+
+**Why `APP_TIMEZONE`?** The `date.timezone` in XAMPP's `php.ini` can
+differ from the system timezone MySQL uses. On the test machine PHP was
+`Europe/Berlin` while MySQL was `Europe/Istanbul`, so two lines describing
+the same instant were an hour apart. The time **arithmetic** is done in
+SQL and was always correct — what drifted was the clock PHP printed. The
+timezone is now pinned explicitly; if your server is in another region,
+set this variable instead of touching the code.
+
 
 ---
 
@@ -610,14 +649,14 @@ Because you'd lose information. Writing `***` says *"this field changed but we d
 
 ## Contributing
 
-📦 **Repository:** [github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables](https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables)
+📦 **Repository:** [github.com/CilginYazilim/audit-log](https://github.com/CilginYazilim/audit-log)
 
 | How | Where |
 |-----|-------|
-| 🐛 Report a bug | [Issues](https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables/issues) |
-| 💡 Suggest a feature | [Issues](https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables/issues) |
-| 🔧 Send code | [Pull Requests](https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables/pulls) |
-| ❓ Ask a question | [Discussions](https://github.com/CilginYazilim/PHP-MySQL-Audit-Log-Islem-Gecmisi-PDO-Ajax-DataTables/discussions) |
+| 🐛 Report a bug | [Issues](https://github.com/CilginYazilim/audit-log/issues) |
+| 💡 Suggest a feature | [Issues](https://github.com/CilginYazilim/audit-log/issues) |
+| 🔧 Send code | [Pull Requests](https://github.com/CilginYazilim/audit-log/pulls) |
+| ❓ Ask a question | [Discussions](https://github.com/CilginYazilim/audit-log/discussions) |
 
 ### Contribution guidelines
 
